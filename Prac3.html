@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  </head>
+  <body>
+    <div ng-app="myApp" ng-controller="myCtrl">
+      <p>we can bind data to element in two ways</p>
+      <ol type="1">
+        <li>Using two curly braces {} : {{Name}}</li>
+        <li>
+          Using ng-bind directives
+          <xmp> <span ng-bind="Lname"></span></xmp>
+          <span ng-bind="Lname"></span>
+        </li>
+      </ol>
+    </div>
+    <script>
+      var app = angular.module("myApp", []);
+      app.controller("myCtrl", function ($scope) {
+        $scope.Name = "Ahmad";
+        $scope.Lname = "Siddique";
+      });
+    </script>
+  </body>
+</html>
